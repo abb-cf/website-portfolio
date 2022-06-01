@@ -1,0 +1,342 @@
+/*
+Colors used
+
+Text color (Dark Gray): #2b2b2b;
+Primary Color (Teal): #008080;
+Secondary Color (Faded Orange): #f7643d;
+*/
+
+:root {
+  --primary-color: #008080;
+  --secondary-color: #f7643d;
+  --dark-grey: #2b2b2b;
+  --font-weight: 400;
+  --font-size: 16px;
+  --line-height: 1.6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Raleway', sans-serif;
+  margin: 20px;
+}
+
+
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+a {
+  color: #357b70;
+}
+
+a:visited {
+  /* visited link */
+  color: black;
+}
+
+/*
+a:hover, a:focus {
+  /* No underlining when hovering over link
+  text-decoration: none;
+}
+*/
+
+a:active {
+  /* selected link */
+  color: #489c79;
+}
+
+nav.main-navigation a
+{
+    color: black;
+    text-decoration: none;
+    font: 20px Raleway;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+
+button,
+.button {
+  /*overwrites browser defaults and resets the border */
+  border: none;
+  display: inline-block;
+  /* takes the font family from the outer container */
+  font-family: inherit;
+  /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+  background-color: #357b70;
+  color: white;
+  text-decoration: none;
+  /* adds spacing to the button */
+  padding: 10px;
+  border-radius: 3px;
+  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  trasition: 0.2s opacity;
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button.focus {
+  /* lets the mouse appear as a hand */
+  cursor: pointer;
+  /* reduces the opacity of the button upon hover */
+  opacity: 0.8;
+}
+
+.button__secondary {
+  background-color: #e0b354;
+  color: #2b2b2b;
+}
+
+nav.main-navigation a:before
+{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0px;
+    top: 0px;
+    content: '';
+    background: lightgray;
+    opacity: 0.3;
+    transition: all 0.3s;
+}
+
+nav.main-navigation a:hover:before
+{
+    height: 100%;
+}
+
+.page-header {
+  display: flex;
+  max-width: 100%;
+  padding: 20px;
+  border-bottom: solid 2px lightgray;
+}
+
+.page-header__item {
+  flex: 0 1 200px;
+}
+
+.page-header__item--logo {
+  float: left;
+  width: 250px;
+  margin-right: 40px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.page-header__item:last-child {
+  flex-grow: 2;
+  text-align: right;
+}
+
+.navigation-list {
+  list-style-type: none;
+}
+
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+  margin-bottom: 20px;
+}
+
+.about {
+  max-width: 700px;
+  margin: 0 auto;
+  vertical-align: middle;
+}
+
+.navigation-list-about {
+  list-style-type: none;
+  padding-inline-start: 0px;
+}
+
+.navigation-list-about li {
+  text-align: center;
+}
+
+.berlin-illustration {
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 50px;
+}
+
+.navigation-list__item--active {
+  opacity: 0.5;
+}
+
+.profile {
+  max-width: 700px;
+  margin: 0 auto;
+  padding-top: 25px;
+}
+
+.profile__portrait {
+  float: left;
+  width: 250px;
+  margin-right: 40px;
+  border-radius: 50%;
+}
+
+.about {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sun {
+  animation: 4s color-change infinite alternate linear;
+  /*animation-duration: 4s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;*/
+}
+
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+/*  animation-duration: 30s;
+  animation-name: cloud-move;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-funtion: linear; */
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+.table-experience {
+  padding-left: 50px;
+}
+
+.table-experience tr td {
+  padding: 0 5px 5px 5px;
+}
+
+/* start grid fallback */
+.grid__item {
+  display: inline-block;
+  width: 33%;
+}
+/* end grid fallback */
+
+.page-footer {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+@supports (display:grid) {
+  .grid {
+    display: grid;
+    /* grid-template-columns: 300px 300px 300px; fractions are better than pixels - they are responsive */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    margin: 0;
+    padding: 10px;
+  }
+
+  .grid__item {
+    background-color: lightgray;
+    padding: 20px;
+    width: auto;
+    min-height: auto;
+    margin: 0;
+  }
+
+  .grid__item:last-child {
+    grid-column: 3 / 3;
+    grid-row: 1 / 3;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px){
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
+
+@keyframes color-change {
+  0% {
+  fill: #edc655;
+  }
+  50% {
+    fill: #fcffad;
+  }
+  100% {
+    fill: #f76414;
+  }
+}
+
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(446px, 48px);
+  }
+  to {
+    transform: translate(100px, 48px);
+  }
+}
