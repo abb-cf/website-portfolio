@@ -41,7 +41,7 @@ h3 {
 }
 
 a {
-  color: #357b70;
+  color: #008080;
 }
 
 a:visited {
@@ -58,7 +58,7 @@ a:hover, a:focus {
 
 a:active {
   /* selected link */
-  color: #489c79;
+  color: #f7643d;
 }
 
 nav.main-navigation a
@@ -73,7 +73,24 @@ nav.main-navigation a
     cursor: pointer;
 }
 
-button,
+button {
+  /*overwrites browser defaults and resets the border */
+  border: none;
+  display: inline-block;
+  /* takes the font family from the outer container */
+  font-family: inherit;
+  /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+  background-color: #008080;
+  color: white;
+  text-decoration: none;
+  /* adds spacing to the button */
+  padding: 10px;
+  border-radius: 3px;
+  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  trasition: 0.2s opacity;
+}
+
 .button {
   /*overwrites browser defaults and resets the border */
   border: none;
@@ -81,7 +98,7 @@ button,
   /* takes the font family from the outer container */
   font-family: inherit;
   /* styles the background color, font color, and text decoration (underline, etc.) of the button */
-  background-color: #357b70;
+  background-color: #008080;
   color: white;
   text-decoration: none;
   /* adds spacing to the button */
@@ -103,7 +120,7 @@ button:focus,
 }
 
 .button__secondary {
-  background-color: #e0b354;
+  background-color: #f7643d;
   color: #2b2b2b;
 }
 
@@ -115,7 +132,7 @@ nav.main-navigation a:before
     left: 0px;
     top: 0px;
     content: '';
-    background: lightgray;
+    background: #f98b6e;
     opacity: 0.3;
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
@@ -149,6 +166,7 @@ nav.main-navigation a:hover:before
   max-width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+  font-size: 12px;
 }
 
 .page-header__item:last-child {
@@ -172,6 +190,10 @@ nav.main-navigation a:hover:before
   max-width: 700px;
   margin: 0 auto;
   vertical-align: middle;
+}
+
+.about-list {
+  padding: 20px;
 }
 
 .navigation-list-about {
@@ -214,8 +236,8 @@ nav.main-navigation a:hover:before
 }
 
 .sun {
-  -webkit-animation: 4s color-change infinite alternate linear;
-          animation: 4s color-change infinite alternate linear;
+  -webkit-animation: 8s color-change infinite alternate linear;
+          animation: 8s color-change infinite alternate linear;
   /*animation-duration: 4s;
   animation-name: color-change;
   animation-iteration-count: infinite;
@@ -240,6 +262,7 @@ nav.main-navigation a:hover:before
 
 .table-experience {
   padding-left: 50px;
+  margin-top: 20px;
 }
 
 .table-experience tr td {
@@ -278,7 +301,7 @@ nav.main-navigation a:hover:before
   }
 
   .grid__item {
-    background-color: lightgray;
+    background-color: #f98b6e;
     padding: 20px;
     width: auto;
     min-height: auto;
