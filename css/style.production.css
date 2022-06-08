@@ -15,15 +15,13 @@ Secondary Color (Faded Orange): #f7643d;
 
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 
 body {
   font-family: 'Raleway', sans-serif;
   margin: 20px;
 }
-
 
 h1 {
   font-size: 30px;
@@ -61,52 +59,59 @@ a:active {
   color: #f7643d;
 }
 
-nav.main-navigation a
-{
-    color: black;
-    text-decoration: none;
-    font: 20px Raleway;
-    margin: 0px 10px;
-    padding: 10px 10px;
-    position: relative;
-    z-index: 0;
-    cursor: pointer;
+nav.main-navigation a {
+  color: black;
+  text-decoration: none;
+  font: 20px Raleway;
+  margin: 0 10px;
+  padding: 10px;
+  position: relative;
+  z-index: 0;
+  cursor: pointer;
 }
 
 button {
-  /*overwrites browser defaults and resets the border */
+  /* overwrites browser defaults and resets the border */
   border: none;
   display: inline-block;
+
   /* takes the font family from the outer container */
   font-family: inherit;
+
   /* styles the background color, font color, and text decoration (underline, etc.) of the button */
   background-color: #008080;
   color: white;
   text-decoration: none;
+
   /* adds spacing to the button */
   padding: 10px;
   border-radius: 3px;
+
   /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  trasition: 0.2s opacity;
+  transition: 0.2s opacity;
 }
 
 .button {
-  /*overwrites browser defaults and resets the border */
+  /* overwrites browser defaults and resets the border */
   border: none;
   display: inline-block;
+
   /* takes the font family from the outer container */
   font-family: inherit;
+
   /* styles the background color, font color, and text decoration (underline, etc.) of the button */
   background-color: #008080;
   color: white;
   text-decoration: none;
+
   /* adds spacing to the button */
   padding: 10px;
   border-radius: 3px;
+
   /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  trasition: 0.2s opacity;
+  transition: 0.2s opacity;
 }
 
 button:hover,
@@ -115,6 +120,7 @@ button:focus,
 .button.focus {
   /* lets the mouse appear as a hand */
   cursor: pointer;
+
   /* reduces the opacity of the button upon hover */
   opacity: 0.8;
 }
@@ -124,24 +130,22 @@ button:focus,
   color: #2b2b2b;
 }
 
-nav.main-navigation a:before
-{
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    left: 0px;
-    top: 0px;
-    content: '';
-    background: #f98b6e;
-    opacity: 0.3;
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
+nav.main-navigation a::before {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  top: 0;
+  content: '';
+  background: #f98b6e;
+  opacity: 0.3;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
-nav.main-navigation a:hover:before
-{
-    height: 100%;
+nav.main-navigation a:hover::before {
+  height: 100%;
 }
 
 .page-header {
@@ -155,8 +159,8 @@ nav.main-navigation a:hover:before
 
 .page-header__item {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 200px;
-          flex: 0 1 200px;
+  -ms-flex: 0 1 200px;
+  flex: 0 1 200px;
 }
 
 .page-header__item--logo {
@@ -165,14 +169,14 @@ nav.main-navigation a:hover:before
   margin-right: 40px;
   max-width: 100%;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   font-size: 12px;
 }
 
 .page-header__item:last-child {
   -webkit-box-flex: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
   text-align: right;
 }
 
@@ -198,8 +202,8 @@ nav.main-navigation a:hover:before
 
 .navigation-list-about {
   list-style-type: none;
-  -webkit-padding-start: 0px;
-          padding-inline-start: 0px;
+  -webkit-padding-start: 0;
+  padding-inline-start: 0;
 }
 
 .navigation-list-about li {
@@ -237,18 +241,20 @@ nav.main-navigation a:hover:before
 
 .sun {
   -webkit-animation: 8s color-change infinite alternate linear;
-          animation: 8s color-change infinite alternate linear;
-  /*animation-duration: 4s;
+  animation: 8s color-change infinite alternate linear;
+
+  /* animation-duration: 4s;
   animation-name: color-change;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  animation-timing-function: linear;*/
+  animation-timing-function: linear; */
 }
 
 .cloud-front {
   -webkit-animation: 30s cloud-move infinite alternate linear;
-          animation: 30s cloud-move infinite alternate linear;
-/*  animation-duration: 30s;
+  animation: 30s cloud-move infinite alternate linear;
+
+  /*  animation-duration: 30s;
   animation-name: cloud-move;
   animation-iteration-count: infinite;
   animation-direction: alternate;
@@ -257,7 +263,7 @@ nav.main-navigation a:hover:before
 
 .cloud-back {
   -webkit-animation: 34s cloud-move-reverse infinite alternate linear;
-          animation: 34s cloud-move-reverse infinite alternate linear;
+  animation: 34s cloud-move-reverse infinite alternate linear;
 }
 
 .table-experience {
@@ -266,7 +272,7 @@ nav.main-navigation a:hover:before
 }
 
 .table-experience tr td {
-  padding: 0 5px 5px 5px;
+  padding: 0 5px 5px;
 }
 
 /* start grid fallback */
@@ -274,6 +280,7 @@ nav.main-navigation a:hover:before
   display: inline-block;
   width: 33%;
 }
+
 /* end grid fallback */
 
 .page-footer {
@@ -283,8 +290,8 @@ nav.main-navigation a:hover:before
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   text-align: center;
 }
 
@@ -292,6 +299,7 @@ nav.main-navigation a:hover:before
   .grid {
     display: -ms-grid;
     display: grid;
+
     /* grid-template-columns: 300px 300px 300px; fractions are better than pixels - they are responsive */
     -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
     grid-template-columns: 1fr 1fr 1fr;
@@ -323,16 +331,18 @@ nav.main-navigation a:hover:before
     grid-template-columns: 1fr;
     grid-gap: 10px;
   }
+
   .grid__item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
+
   h1 {
     font-size: 22px;
   }
 }
 
-@media all and (min-width: 500px) and (max-width: 750px){
+@media all and (min-width: 500px) and (max-width: 750px) {
   .grid {
     -ms-grid-columns: 1fr 10px 1fr;
     grid-template-columns: 1fr 1fr;
@@ -350,10 +360,12 @@ nav.main-navigation a:hover:before
   .grid {
     grid-gap: 10px;
   }
+
   .grid__item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
+
   h1 {
     font-size: 22px;
   }
@@ -361,11 +373,13 @@ nav.main-navigation a:hover:before
 
 @-webkit-keyframes color-change {
   0% {
-  fill: #edc655;
+    fill: #edc655;
   }
+
   50% {
     fill: #fcffad;
   }
+
   100% {
     fill: #f76414;
   }
@@ -373,11 +387,13 @@ nav.main-navigation a:hover:before
 
 @keyframes color-change {
   0% {
-  fill: #edc655;
+    fill: #edc655;
   }
+
   50% {
     fill: #fcffad;
   }
+
   100% {
     fill: #f76414;
   }
@@ -386,43 +402,47 @@ nav.main-navigation a:hover:before
 @-webkit-keyframes cloud-move {
   from {
     -webkit-transform: translate(0, 50px);
-            transform: translate(0, 50px);
+    transform: translate(0, 50px);
   }
+
   to {
     -webkit-transform: translate(200px, 50px);
-            transform: translate(200px, 50px);
+    transform: translate(200px, 50px);
   }
 }
 
 @keyframes cloud-move {
   from {
     -webkit-transform: translate(0, 50px);
-            transform: translate(0, 50px);
+    transform: translate(0, 50px);
   }
+
   to {
     -webkit-transform: translate(200px, 50px);
-            transform: translate(200px, 50px);
+    transform: translate(200px, 50px);
   }
 }
 
 @-webkit-keyframes cloud-move-reverse {
   from {
     -webkit-transform: translate(446px, 48px);
-            transform: translate(446px, 48px);
+    transform: translate(446px, 48px);
   }
+
   to {
     -webkit-transform: translate(100px, 48px);
-            transform: translate(100px, 48px);
+    transform: translate(100px, 48px);
   }
 }
 
 @keyframes cloud-move-reverse {
   from {
     -webkit-transform: translate(446px, 48px);
-            transform: translate(446px, 48px);
+    transform: translate(446px, 48px);
   }
+
   to {
     -webkit-transform: translate(100px, 48px);
-            transform: translate(100px, 48px);
+    transform: translate(100px, 48px);
   }
 }

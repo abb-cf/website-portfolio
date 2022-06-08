@@ -20,12 +20,10 @@ Secondary Color (Faded Orange): #f7643d;
   box-sizing: border-box;
 }
 
-
 body {
   font-family: 'Raleway', sans-serif;
   margin: 20px;
 }
-
 
 h1 {
   font-size: 30px;
@@ -63,35 +61,38 @@ a:active {
   color: var(--secondary-color);
 }
 
-nav.main-navigation a
-{
-    color: black;
-    text-decoration: none;
-    font: 20px Raleway;
-    margin: 0px 10px;
-    padding: 10px 10px;
-    position: relative;
-    z-index: 0;
-    cursor: pointer;
+nav.main-navigation a {
+  color: black;
+  text-decoration: none;
+  font: 20px Raleway;
+  margin: 0 10px;
+  padding: 10px;
+  position: relative;
+  z-index: 0;
+  cursor: pointer;
 }
 
 button,
 .button {
-  /*overwrites browser defaults and resets the border */
+  /* overwrites browser defaults and resets the border */
   border: none;
   display: inline-block;
+
   /* takes the font family from the outer container */
   font-family: inherit;
+
   /* styles the background color, font color, and text decoration (underline, etc.) of the button */
   background-color: var(--primary-color);
   color: white;
   text-decoration: none;
+
   /* adds spacing to the button */
   padding: 10px;
   border-radius: 3px;
+
   /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  trasition: 0.2s opacity;
+  transition: 0.2s opacity;
 }
 
 button:hover,
@@ -100,6 +101,7 @@ button:focus,
 .button.focus {
   /* lets the mouse appear as a hand */
   cursor: pointer;
+
   /* reduces the opacity of the button upon hover */
   opacity: 0.8;
 }
@@ -109,22 +111,20 @@ button:focus,
   color: var(--dark-grey);
 }
 
-nav.main-navigation a:before
-{
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    left: 0px;
-    top: 0px;
-    content: '';
-    background: var(--secondary-color-lighter);
-    opacity: 0.3;
-    transition: all 0.3s;
+nav.main-navigation a::before {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  top: 0;
+  content: '';
+  background: var(--secondary-color-lighter);
+  opacity: 0.3;
+  transition: all 0.3s;
 }
 
-nav.main-navigation a:hover:before
-{
-    height: 100%;
+nav.main-navigation a:hover::before {
+  height: 100%;
 }
 
 .page-header {
@@ -174,7 +174,7 @@ nav.main-navigation a:hover:before
 
 .navigation-list-about {
   list-style-type: none;
-  padding-inline-start: 0px;
+  padding-inline-start: 0;
 }
 
 .navigation-list-about li {
@@ -212,16 +212,18 @@ nav.main-navigation a:hover:before
 
 .sun {
   animation: 8s color-change infinite alternate linear;
-  /*animation-duration: 4s;
+
+  /* animation-duration: 4s;
   animation-name: color-change;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  animation-timing-function: linear;*/
+  animation-timing-function: linear; */
 }
 
 .cloud-front {
   animation: 30s cloud-move infinite alternate linear;
-/*  animation-duration: 30s;
+
+  /* animation-duration: 30s;
   animation-name: cloud-move;
   animation-iteration-count: infinite;
   animation-direction: alternate;
@@ -238,7 +240,7 @@ nav.main-navigation a:hover:before
 }
 
 .table-experience tr td {
-  padding: 0 5px 5px 5px;
+  padding: 0 5px 5px;
 }
 
 /* start grid fallback */
@@ -246,6 +248,7 @@ nav.main-navigation a:hover:before
   display: inline-block;
   width: 33%;
 }
+
 /* end grid fallback */
 
 .page-footer {
@@ -258,6 +261,7 @@ nav.main-navigation a:hover:before
 @supports (display:grid) {
   .grid {
     display: grid;
+
     /* grid-template-columns: 300px 300px 300px; fractions are better than pixels - they are responsive */
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
@@ -284,16 +288,18 @@ nav.main-navigation a:hover:before
     grid-template-columns: 1fr;
     grid-gap: 10px;
   }
+
   .grid__item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
+
   h1 {
     font-size: 22px;
   }
 }
 
-@media all and (min-width: 500px) and (max-width: 750px){
+@media all and (min-width: 500px) and (max-width: 750px) {
   .grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -309,10 +315,12 @@ nav.main-navigation a:hover:before
   .grid {
     grid-gap: 10px;
   }
+
   .grid__item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
+
   h1 {
     font-size: 22px;
   }
@@ -320,11 +328,13 @@ nav.main-navigation a:hover:before
 
 @keyframes color-change {
   0% {
-  fill: #edc655;
+    fill: #edc655;
   }
+
   50% {
     fill: #fcffad;
   }
+
   100% {
     fill: #f76414;
   }
@@ -334,6 +344,7 @@ nav.main-navigation a:hover:before
   from {
     transform: translate(0, 50px);
   }
+
   to {
     transform: translate(200px, 50px);
   }
@@ -343,6 +354,7 @@ nav.main-navigation a:hover:before
   from {
     transform: translate(446px, 48px);
   }
+
   to {
     transform: translate(100px, 48px);
   }
